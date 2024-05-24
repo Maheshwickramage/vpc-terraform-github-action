@@ -3,6 +3,8 @@ module "vpc" {
     vpc_cidr = var.vpc_cidr
     subnet_cidr = var.subnet_cidr
   
+<<<<<<< Updated upstream
+=======
 }
 module "sg" {
     source = "./modules/sg"
@@ -20,4 +22,5 @@ module "alb" {
   subnets = module.vpc.subnet_ids
   vpc_id = module.vpc.vpc_id
   instances = module.ec2.instances
+>>>>>>> Stashed changes
 }
